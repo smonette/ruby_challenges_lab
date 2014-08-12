@@ -13,15 +13,15 @@ def temperature
   puts "Press 1 to convert C to F. Press 2 to convert F to C."
   response = gets.chomp
   if response == "1"
-    puts "What temperature would you like to convert?"
-    temp = gets.chomp.to_i
-    calculated = ((temp * 9) / 5) + 32
-    puts "The temperature is " + calculated.to_s +  " degrees F"
+    puts "Enter a temperature in Celsius:"
+    temp = gets.chomp
+    calculated = ((temp.to_i * 9) / 5) + 32
+    puts temp + " degrees C is " + calculated.to_s +  " degrees F."
   else
-    puts "What temperature would you like to convert?"
-    temp = gets.chomp.to_i
-    calculated = ((temp - 32) * 5) / 9
-    puts "The temperature is " + calculated.to_s + " degrees C"
+    puts "Enter a temperature in Fahrenheit:"
+    temp = gets.chomp
+    calculated = ((temp.to_i - 32) * 5) / 9
+    puts temp + " degrees F is " + calculated.to_s + " degrees C."
   end
 
 end
