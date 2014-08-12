@@ -18,18 +18,24 @@
 
 def add_student
   students = []
+  taco = true;
 
   puts "Would you like to add a student?"
   response = gets.chomp
-  if response == "yes"
-    puts "What's the student's name?"
-    name = gets.chomp
-    students << (name)
-    puts "Here is a summary of your students: " + students.to_s
-
-  else
-    puts "Okay, nevermind..."
+  while taco == true do
+    if response == "yes"
+      puts "What's the student's name?"
+      name = gets.chomp
+      students << (name)
+      puts "Here is a summary of your students: " + students.join(", ")
+      puts "Would you like to add another student?"
+      response = gets.chomp
+    else
+      puts "Here is a summary of your students: " + students.join(", ")
+      taco = false;
+    end
   end
+
 end
 
 
