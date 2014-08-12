@@ -21,3 +21,32 @@
 # The number is higher than 18.  Guess again
 # 19
 # You got it in 7 tries
+
+
+def guess_number
+  computer_num = (1..100).to_a.sample
+  taco = true;
+  count = 1;
+  puts "Guess a number between 1 and 100"
+  guess = gets.chomp.to_i
+
+  while taco == true do
+
+    if guess == computer_num
+      puts "You got it in " + count.to_s + " guesses!!!"
+      taco = false;
+    elsif guess > computer_num
+      puts "The number is less than " + guess.to_s + ". Guess again."
+      count = count + 1
+      guess = gets.chomp.to_i
+    elsif guess < computer_num
+      puts "The number is more than " + guess.to_s  + ". Guess again."
+      count = count + 1
+      guess = gets.chomp.to_i
+    end
+
+  end
+
+end
+
+guess_number()
