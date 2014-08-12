@@ -6,3 +6,19 @@
 # Enter a string:
 # reverse_me
 # em_esrever
+
+
+def reverse(word)
+  letters = []
+
+  word.split("").each do |letter|
+    letters.unshift(letter)
+  end
+  puts letters.join.to_s
+
+end
+
+puts "Gimme a word!"
+my_word = gets.chomp
+
+reverse(my_word)
